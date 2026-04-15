@@ -7,37 +7,76 @@
 <title>A Star Car Accessories</title>
 
 <style>
+
+/* BACKGROUND */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #000000, #0b1f3a);
+    background: linear-gradient(135deg, #000000, #020d1f, #001f3f);
     color: white;
     text-align: center;
+    overflow-x: hidden;
 }
 
+/* GLOW ANIMATION BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0,150,255,0.4), transparent);
+    top: -100px;
+    left: -100px;
+    animation: glowMove 8s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes glowMove {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(200px,200px); }
+}
+
+/* CARD */
 .card {
     max-width: 400px;
     margin: 30px auto;
     padding: 25px;
     border-radius: 20px;
     background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 20px rgba(0,150,255,0.4);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(0,150,255,0.5);
+    animation: fadeIn 1s ease;
 }
 
+@keyframes fadeIn {
+    from {opacity:0; transform: translateY(30px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+/* LOGO */
 .logo {
     width: 180px;
     margin-bottom: 15px;
+    animation: zoomIn 1s ease;
 }
 
+@keyframes zoomIn {
+    from {transform: scale(0.7); opacity:0;}
+    to {transform: scale(1); opacity:1;}
+}
+
+/* TEXT */
 h1 {
     margin: 10px 0;
+    font-size: 24px;
 }
 
 p {
     color: #ccc;
+    font-size: 14px;
 }
 
+/* BUTTONS */
 .btn {
     display: block;
     margin: 10px auto;
@@ -48,13 +87,42 @@ p {
     font-weight: bold;
     color: white;
     background: linear-gradient(90deg, #00c6ff, #0072ff);
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0,150,255,0.5);
 }
 
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,150,255,0.8);
+}
+
+/* HIGHLIGHT */
+.highlight {
+    color: #00c6ff;
+    font-weight: bold;
+}
+
+/* GALLERY */
+.gallery img {
+    width: 90%;
+    border-radius: 12px;
+    margin: 5px;
+    box-shadow: 0 0 10px rgba(0,150,255,0.4);
+}
+
+/* QR */
+.qr {
+    width: 140px;
+    margin-top: 10px;
+}
+
+/* FOOTER */
 .footer {
     margin-top: 15px;
     font-size: 12px;
     color: #aaa;
 }
+
 </style>
 
 </head>
@@ -63,45 +131,59 @@ p {
 
 <div class="card">
 
+<!-- LOGO -->
 <img src="logo.png" class="logo">
 
+<!-- NAME -->
 <h1>A Star Car Accessories</h1>
-<p><b>Your Car, Our Passion – Upgrade with A Star</b></p>
+
+<p><b>Upgrade Your Car with Premium Accessories 🚗</b></p>
 
 <p><b>Proprietor:</b> Muzammil Ahmed</p>
 
-<!-- CALL -->
+<p>
+Saguna Khagaul Rd, Near Radiant Public School,<br>
+Opp. Amar Jyoti Kia Showroom,<br>
+Mustafapur, Patna – 801105
+</p>
+
+<p class="highlight">🚚 Door-to-Door Service Available</p>
+
+<!-- BUTTONS -->
 <a class="btn" href="tel:+919304507341">📞 Call Now</a>
 
-<a class="btn" href="tel:+917091686759">📞 Call Alternate</a>
+<a class="btn" href="tel:+917091686759">📞 Alternate Call</a>
 
-<!-- WHATSAPP -->
-<a class="btn" href="https://wa.me/919304507341">
+<a class="btn" href="https://wa.me/919304507341?text=Hi%20I%20want%20car%20accessories">
 💬 WhatsApp Now
 </a>
 
-<!-- INSTAGRAM -->
 <a class="btn" href="https://www.instagram.com/a.star_caraccessories" target="_blank">
 📸 View Instagram
 </a>
 
-<!-- LOCATION -->
 <a class="btn" href="https://www.google.com/maps?q=Saguna+Khagaul+Rd+Patna" target="_blank">
-📍 Visit Shop Location
+📍 Visit Location
 </a>
 
-<!-- SAVE CONTACT -->
 <a class="btn" href="contact.vcf" download>
 📥 Save Contact
 </a>
 
 <!-- SERVICES -->
 <p>
-Car Accessories | Music System | Alloy Wheels | Seat Covers | Lighting | Door-to-Door Service 🚚
+Car Accessories | Music System | Alloy Wheels | Seat Covers | Lighting
 </p>
 
+<!-- GALLERY (ADD IMAGES LATER) -->
+<div class="gallery">
+<h3>Our Work</h3>
+<img src="car1.jpg">
+<img src="car2.jpg">
+</div>
+
 <!-- QR -->
-<img src="qr.png" style="width:140px; margin-top:10px;">
+<img src="qr.png" class="qr">
 <p><b>Scan to Connect</b></p>
 
 <div class="footer">
@@ -111,4 +193,4 @@ Powered by TeraCard 🚀
 </div>
 
 </body>
-</html>html
+</html>
