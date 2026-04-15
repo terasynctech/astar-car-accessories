@@ -15,10 +15,9 @@ body {
     background: linear-gradient(135deg, #000000, #020d1f, #001f3f);
     color: white;
     text-align: center;
-    overflow-x: hidden;
 }
 
-/* GLOW ANIMATION BACKGROUND */
+/* GLOW */
 body::before {
     content: "";
     position: fixed;
@@ -45,24 +44,12 @@ body::before {
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(15px);
     box-shadow: 0 0 30px rgba(0,150,255,0.5);
-    animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-    from {opacity:0; transform: translateY(30px);}
-    to {opacity:1; transform: translateY(0);}
 }
 
 /* LOGO */
 .logo {
     width: 180px;
     margin-bottom: 15px;
-    animation: zoomIn 1s ease;
-}
-
-@keyframes zoomIn {
-    from {transform: scale(0.7); opacity:0;}
-    to {transform: scale(1); opacity:1;}
 }
 
 /* TEXT */
@@ -76,7 +63,7 @@ p {
     font-size: 14px;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn {
     display: block;
     margin: 10px auto;
@@ -88,12 +75,10 @@ p {
     color: white;
     background: linear-gradient(90deg, #00c6ff, #0072ff);
     transition: 0.3s;
-    box-shadow: 0 0 10px rgba(0,150,255,0.5);
 }
 
 .btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0,150,255,0.8);
 }
 
 /* HIGHLIGHT */
@@ -102,12 +87,11 @@ p {
     font-weight: bold;
 }
 
-/* GALLERY */
-.gallery img {
-    width: 90%;
-    border-radius: 12px;
-    margin: 5px;
-    box-shadow: 0 0 10px rgba(0,150,255,0.4);
+/* UPI */
+.upi {
+    width: 180px;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 
 /* QR */
@@ -175,12 +159,12 @@ Mustafapur, Patna – 801105
 Car Accessories | Music System | Alloy Wheels | Seat Covers | Lighting
 </p>
 
-<!-- GALLERY (ADD IMAGES LATER) -->
-<div class="gallery">
-<h3>Our Work</h3>
-<img src="car1.jpg">
-<img src="car2.jpg">
-</div>
+<!-- 💰 UPI SECTION -->
+<h3>💰 Pay via UPI</h3>
+
+<img src="upi.png" class="upi">
+
+<p><b>Scan & Pay Instantly</b></p>
 
 <!-- QR -->
 <img src="qr.png" class="qr">
