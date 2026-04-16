@@ -6,9 +6,27 @@
 
 <title>A Star Car Accessories</title>
 
+<!-- ✅ SOCIAL PREVIEW (VERY IMPORTANT) -->
+<meta name="title" content="A Star Car Accessories - Muzammil Ahmed">
+<meta name="description" content="Premium Car Accessories in Patna - Seat Covers, Music Systems, Lights, Modifications & More">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://terasynctech.github.io/a-star-car-accessories/">
+<meta property="og:title" content="A Star Car Accessories">
+<meta property="og:description" content="Upgrade Your Car with Premium Accessories 🚗">
+<meta property="og:image" content="https://terasynctech.github.io/a-star-car-accessories/logo.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Star Car Accessories">
+<meta name="twitter:description" content="Best Car Accessories Shop in Patna">
+<meta name="twitter:image" content="https://terasynctech.github.io/a-star-car-accessories/logo.png">
+
+<!-- Optional favicon (helps preview consistency) -->
+<link rel="icon" href="logo.png" type="image/png">
+
 <style>
 
-/* BACKGROUND */
+/* ===== BODY ===== */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -17,7 +35,7 @@ body {
     text-align: center;
 }
 
-/* GLOW */
+/* ===== GLOW ===== */
 body::before {
     content: "";
     position: fixed;
@@ -35,24 +53,37 @@ body::before {
     100% { transform: translate(200px,200px); }
 }
 
-/* CARD */
+/* ===== CARD ===== */
 .card {
-    max-width: 400px;
+    max-width: 420px;
     margin: 30px auto;
     padding: 25px;
     border-radius: 20px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(15px);
-    box-shadow: 0 0 30px rgba(0,150,255,0.5);
+    box-shadow: 0 0 35px rgba(0,150,255,0.5);
+    animation: fadeUp 1s ease;
 }
 
-/* LOGO */
+@keyframes fadeUp {
+    from {opacity: 0; transform: translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== LOGO ===== */
 .logo {
-    width: 180px;
+    width: 170px;
     margin-bottom: 15px;
+    animation: pulse 3s infinite;
 }
 
-/* TEXT */
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+}
+
+/* ===== TEXT ===== */
 h1 {
     margin: 10px 0;
     font-size: 24px;
@@ -63,7 +94,7 @@ p {
     font-size: 14px;
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
 .btn {
     display: block;
     margin: 10px auto;
@@ -79,15 +110,16 @@ p {
 
 .btn:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 20px #00c6ff;
 }
 
-/* HIGHLIGHT */
+/* ===== HIGHLIGHT ===== */
 .highlight {
     color: #00c6ff;
     font-weight: bold;
 }
 
-/* PRODUCTS */
+/* ===== PRODUCTS ===== */
 .products {
     background: rgba(255,255,255,0.07);
     padding: 15px;
@@ -101,7 +133,6 @@ p {
     color: #00c6ff;
 }
 
-/* PRODUCT LIST */
 .products ul {
     padding-left: 20px;
     margin-top: 10px;
@@ -113,20 +144,20 @@ p {
     font-size: 14px;
 }
 
-/* UPI */
+/* ===== UPI ===== */
 .upi {
     width: 180px;
     margin-top: 10px;
     border-radius: 10px;
 }
 
-/* QR */
+/* ===== QR ===== */
 .qr {
     width: 140px;
     margin-top: 10px;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 .footer {
     margin-top: 15px;
     font-size: 12px;
