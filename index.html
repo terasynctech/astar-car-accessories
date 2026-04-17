@@ -6,7 +6,7 @@
 
 <title>A Star Car Accessories</title>
 
-<!-- ✅ SOCIAL PREVIEW -->
+<!-- ✅ SOCIAL PREVIEW (FIXED LOGO ISSUE) -->
 <meta name="title" content="A Star Car Accessories - Muzammil Ahmed">
 <meta name="description" content="Premium Car Accessories in Patna - Seat Covers, Music Systems, Lights & Modifications">
 
@@ -21,7 +21,8 @@
 <meta name="twitter:description" content="Best Car Accessories Shop in Patna">
 <meta name="twitter:image" content="https://terasynctech.github.io/a-star-car-accessories/logo.png">
 
-<link rel="icon" href="logo.png" type="image/png">
+<!-- ✅ FAVICON -->
+<link rel="icon" href="https://terasynctech.github.io/a-star-car-accessories/logo.png" type="image/png">
 
 <style>
 
@@ -34,7 +35,7 @@ body {
     text-align: center;
 }
 
-/* ===== GLOW ===== */
+/* ===== GLOW ANIMATION ===== */
 body::before {
     content: "";
     position: fixed;
@@ -60,13 +61,20 @@ body::before {
     border-radius: 20px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(15px);
-    box-shadow: 0 0 35px rgba(0,150,255,0.5);
+    box-shadow: 0 0 40px rgba(0,150,255,0.6);
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
 }
 
 /* ===== LOGO ===== */
 .logo {
-    width: 170px;
+    width: 180px;
     margin-bottom: 15px;
+    border-radius: 15px;
 }
 
 /* ===== TEXT ===== */
@@ -91,10 +99,12 @@ p {
     font-weight: bold;
     color: white;
     background: linear-gradient(90deg, #00c6ff, #0072ff);
+    transition: 0.3s;
 }
 
 .btn:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 15px #00c6ff;
 }
 
 /* ===== PRODUCTS ===== */
@@ -116,6 +126,7 @@ p {
     width: 200px;
     margin-top: 10px;
     border-radius: 12px;
+    box-shadow: 0 0 10px #00c6ff;
 }
 
 /* ===== FOOTER ===== */
@@ -133,6 +144,7 @@ p {
 
 <div class="card">
 
+<!-- ✅ LOGO (LOCAL FOR PAGE DISPLAY) -->
 <img src="logo.png" class="logo">
 
 <h1>A Star Car Accessories</h1>
@@ -173,7 +185,7 @@ Mustafapur, Patna – 801105
 </ul>
 </div>
 
-<!-- UPI ONLY -->
+<!-- UPI -->
 <h3>💰 Pay via UPI</h3>
 <img src="upi.png" class="upi">
 <p><b>Scan & Pay Instantly</b></p>
@@ -185,4 +197,4 @@ Powered by TeraCard 🚀
 </div>
 
 </body>
-</html>  can you fix and update in this and send me final
+</html>
